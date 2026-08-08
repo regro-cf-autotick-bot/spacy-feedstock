@@ -1,4 +1,5 @@
-{% set version = "3.8.14" %}
+{% set tests_to_skip = "_not_a_real_test" %}
+{% set version = "3.8.15" %}
 
 package:
   name: spacy
@@ -6,7 +7,7 @@ package:
 
 source:
   url: https://github.com/explosion/spaCy/archive/refs/tags/release-v{{ version }}.tar.gz
-  sha256: ad0ea4e15153de6703a1a77f22c34bdbf105b9362ccde4f4789e02dc9abcb538
+  sha256: 07d237a3de7197b668bf953f3d8c001ece89f003356f8104322e7d2b7679906b
   patches:
     - patches/0001-skip-beam-density-test.patch
     # backport https://github.com/explosion/spaCy/pull/13943
